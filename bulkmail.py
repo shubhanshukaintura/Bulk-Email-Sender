@@ -13,7 +13,7 @@ message["From"] = "shubhanshu"
 message["Subject"] = "Bulk Email Test"
 
 # Read CSV file
-with open('C:\\Users\\shubh\\Downloads\\mail.csv') as file:
+with open('C:\\Users\\Downloads\\mail.csv') as file:
     reader = csv.reader(file)
     next(reader) # skip header row
     for name, email in reader:

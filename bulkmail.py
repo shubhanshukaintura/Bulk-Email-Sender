@@ -9,7 +9,7 @@ sender_password = "Your Email Password"
 
 # Email message
 message = MIMEMultipart()
-message["From"] = "shubhanshu"
+message["From"] = sender_email
 message["Subject"] = "Bulk Email Test"
 
 # Read CSV file
@@ -21,7 +21,7 @@ with open('C:\\Users\\Downloads\\mail.csv') as file:
         message["To"] = email
         
         # Email body
-        body = f"Dear {name},\n\nThis is a test email sent in bulk using Python.\n\nBest regards,\nshubhanshu"
+        body = f"Dear {name},\n\nThis is a test email sent in bulk using Python.\n\nBest regards,\nYour name"
         message.attach(MIMEText(body, "plain"))
         
         try:
